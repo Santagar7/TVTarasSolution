@@ -5,5 +5,6 @@ namespace Lab2 {
         public TvDbContext(string nameOrConnectionString) : base(nameOrConnectionString) { }
 
         public DbSet<TV> TVs { get; set; }
+        public DbSet<TvType> TvTypes { get; set; }
     }
 }

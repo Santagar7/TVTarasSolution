@@ -27,12 +27,12 @@
             this.manufacturerTextBox = new System.Windows.Forms.TextBox();
             this.diagonalTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.typeTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.powerTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.addButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -68,13 +68,6 @@
             this.label2.Size = new System.Drawing.Size(89, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Diagonal";
-            // 
-            // typeTextBox
-            // 
-            this.typeTextBox.Location = new System.Drawing.Point(313, 197);
-            this.typeTextBox.Name = "typeTextBox";
-            this.typeTextBox.Size = new System.Drawing.Size(339, 22);
-            this.typeTextBox.TabIndex = 5;
             // 
             // label3
             // 
@@ -123,16 +116,24 @@
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(313, 201);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(339, 24);
+            this.comboBox1.TabIndex = 10;
+            // 
             // AddTV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(770, 448);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.powerTextBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.typeTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.diagonalTextBox);
             this.Controls.Add(this.label2);
@@ -151,11 +152,11 @@
         private System.Windows.Forms.TextBox manufacturerTextBox;
         private System.Windows.Forms.TextBox diagonalTextBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox typeTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox powerTextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

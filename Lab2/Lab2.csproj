@@ -86,6 +86,7 @@
     </Compile>
     <Compile Include="TV.cs" />
     <Compile Include="TvDbContext.cs" />
+    <Compile Include="TvType.cs" />
     <Compile Include="ViewTVs.cs">
       <SubType>Form</SubType>
     </Compile>

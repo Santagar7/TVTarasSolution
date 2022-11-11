@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Lab2 {
     public partial class Form1 : Form {
-        private const string _conStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\valen\source\repos\WinFormsApp1\Lab2\bin\Debug\Repository.mdf;Integrated Security = True; Connect Timeout = 30";
+        private const string _conStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\vkaluzhnyi\source\repos\TVTarasSolution\Lab2\bin\Debug\Repository.mdf;Integrated Security = True; Connect Timeout = 30";
 
         public Form1() {
             InitializeComponent();

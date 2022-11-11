@@ -1,26 +1,35 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Lab2 {
-    public partial class ViewTVs : Form {
+    public partial class ViewTVs : Form
+    {
 
         private readonly string _conStr;
-        public ViewTVs(string conStr) {
+
+        public ViewTVs(string conStr)
+        {
             InitializeComponent();
             _conStr = conStr;
-            InitializeTextBox();
+            InitializeDataGridView();
+            InitializeTreeView();
         }
 
-        private void InitializeTextBox() {
+        private void InitializeDataGridView()
+        {
             using var dbContext = new TvDbContext(_conStr);
-            String str = "";
-            this.textBox1.Clear();
-            str = str + "|    ID  |   Manufacturer  |     Diagonal      |    Type    |   Power   |\r\n"; str = str + "|===========================================================================|\r\n";
-            foreach (var tv in dbContext.TVs) {
-                str = str + String.Format("{0,-7}", tv.Id.ToString()) + "| " + String.Format("{0,-25}", tv.Manufacturer) + "| " + String.Format("{0,-28}", tv.Diagonal) + "| " + String.Format("{0,-10}", tv.Type) + "| " + String.Format("{0,-7}", tv.Power) + "\r\n";
-            }
-            textBox1.Text = str;
+            dataGridView1.DataSource = dbContext.TVs.ToList();
+        }
+
+        private void InitializeTreeView()
+        {
+            using var dbContext = new TvDbContext(_conStr);
+            treeView1.Nodes.Add("TVs", "Televisions");
+            treeView1.Nodes["TVs"].Nodes.Add("QLED", "QLED");
+            treeView1.Nodes["TVs"].Nodes.Add("OLED", "OLED");
 
         }
+
     }
 }
